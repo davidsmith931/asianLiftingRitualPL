@@ -1,0 +1,989 @@
+/* GENERAL
+----------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  top: 100px;
+  background-color: #000;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #cdbc84;
+  font-family: AmoretSans;
+}
+
+.blackout {
+  height: 200px;
+  width: 100vw;
+  background-color: #0c2a2a;
+  position: fixed;
+  z-index: 140000;
+  top: -200px;
+  right: 0;
+  left: 0;
+}
+
+@media only screen and (min-width: 1492px) {
+  main {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main {
+    width: 80%;
+  }
+  body {
+    top: 80px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  body {
+    top: 57px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    main {
+      width: 100%;
+    }
+  }
+}
+
+/* NAVBAR
+----------------------------------- */
+
+nav {
+  height: 100px;
+  width: 100%;
+  background-color: #0c2a2a;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  z-index: 150000;
+  font-weight: 400;
+}
+
+#logo {
+  width: 40vw;
+  padding: 10px 10px;
+  margin: 0 0 0 20px;
+}
+
+#logo img {
+  height: 100%;
+}
+
+.navbar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+a:hover {
+  color: #cdbc84;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menuToggle {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    width: 85%;
+    font-size: 14px;
+  }
+
+  nav {
+    height: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    height: fit-content;
+    flex-direction: column-reverse;
+  }
+
+  .navbar {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 57px);
+    justify-content: flex-start;
+  }
+  nav ul li {
+    padding: 3vh 0;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .menuToggle {
+    font-size: 40px;
+    margin: 5px 20px;
+    align-self: flex-end;
+    display: block;
+    cursor: pointer;
+    order: 1;
+  }
+
+  .displayNone {
+    display: none;
+  }
+}
+
+/* MAIN VIDEO
+----------------------------------- */
+
+.mainVideoBox {
+  height: calc(100vh - 100px);
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+#mainVideo {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3000;
+}
+
+#mainVideo video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#mainVideoOverlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 5000;
+  height: 100%;
+  width: 100%;
+}
+
+#mainVideoWhiteLogo {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 8000;
+  filter: drop-shadow(5px 4px 9px rgba(0, 0, 0, 0.7));
+}
+
+#mainVideoWhiteLogo img {
+  width: 35%;
+}
+
+@media only screen and (max-width: 992px) {
+  .mainVideoBox {
+    height: calc(100vh - 80px);
+    margin-bottom: 15px;
+  }
+
+  #mainVideoWhiteLogo img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mainVideoBox {
+    height: calc(100vh - 57px);
+    margin-bottom: 20px;
+  }
+
+  #mainVideoWhiteLogo img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .mainVideoBox {
+    margin-bottom: 0;
+  }
+
+  #mainVideoWhiteLogo img {
+    width: 70%;
+  }
+}
+
+/* ABOUT ME
+----------------------------------- */
+
+#aboutMe {
+  padding-top: 30px;
+}
+
+.aboutMe {
+  width: 90%;
+  min-height: 320px;
+  position: relative;
+  margin: 0 auto 50px;
+}
+
+.aboutMeBackground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #0c2a2a;
+  z-index: 1000;
+}
+
+.leavesBackground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.2;
+  background-image: url("../images/leaves.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 2000;
+}
+
+.aboutMeContent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3000;
+}
+
+.aboutMePicture {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.aboutMePicture img {
+  height: 120%;
+}
+
+.aboutMeText {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  line-height: 200%;
+}
+
+.aboutMeTextSlidesVisible {
+  width: 72%;
+  overflow: hidden;
+}
+
+.aboutMeTextSlidesAll {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all 1s ease-out;
+}
+
+.aboutMeTextSlidesAll p {
+  width: calc(100% / 3);
+  padding: 0 10px;
+}
+
+.barsAboutMe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.bar {
+  width: 12px;
+  height: 7px;
+  margin: 0 3px;
+  background-color: #c4c4c4;
+}
+
+@media not all and (hover: none) {
+  .bar:hover {
+    background-color: #cdbc84;
+    cursor: pointer;
+  }
+}
+
+.barGold {
+  background-color: #cdbc84;
+}
+
+@media only screen and (min-width: 1492px) {
+  .aboutMe {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .aboutMe {
+    width: 90%;
+    margin: 0 auto 25px;
+  }
+
+  .aboutMeTextSlidesVisible {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutMe {
+    width: 90%;
+  }
+
+  .aboutMeTextSlidesVisible {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .aboutMe {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto 25px;
+  }
+  .aboutMeContent {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .aboutMePicture img {
+    padding: 20px 0;
+    width: 85%;
+  }
+
+  .aboutMeText {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .aboutMeTextSlidesVisible {
+    padding-bottom: 10px;
+  }
+
+  .bar {
+    width: 16px;
+    height: 8px;
+    margin-bottom: 10px;
+  }
+}
+
+/* ABOUT COMPANY
+----------------------------------- */
+
+.aboutCompany {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  margin: 0 auto 50px;
+}
+
+.aboutCompanyText {
+  width: 70%;
+}
+.aboutCompanyText p {
+  margin: 20px 20px 0 0;
+  line-height: 200%;
+}
+
+.aboutCompanySketch {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.aboutCompanySketch img {
+  width: 90%;
+}
+
+@media only screen and (min-width: 1492px) {
+  .aboutCompany {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .aboutCompany {
+    margin: 0 auto 20px;
+  }
+
+  .aboutCompanyText {
+    width: 80%;
+  }
+
+  .aboutCompanySketch {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutCompany {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .aboutCompanyText {
+    width: 90%;
+    margin: auto;
+  }
+
+  .aboutCompanySketch {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .aboutCompany {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .aboutCompanyText h2 {
+    font-size: 16px;
+  }
+}
+
+/* PRICING
+----------------------------------- */
+#prices {
+  padding-top: 30px;
+  width: calc(84vw - 30px);
+  margin-left: calc(-8vw + 30px);
+}
+
+.prices {
+  width: 84vw;
+  margin: 30px 0 0 -8vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-image: url("../images/leaves.jpg");
+  background-size: cover;
+  font-size: 18px;
+}
+
+.pricingOverlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pricingTreatment {
+  width: 80%;
+}
+
+.pricingTreatment span {
+  font-size: 16px;
+  display: block;
+}
+
+.pricingBox {
+  width: 100%;
+  padding: 30px;
+}
+
+.pricingBox ul {
+  margin: 15px 0 30px 0;
+}
+
+.pricingBox ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 1492px) {
+  #prices {
+    width: 80%;
+    margin-left: calc(10% + 30px);
+  }
+  .prices {
+    width: 80%;
+    margin: 30px 0 0 10%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #prices {
+    width: calc(90vw);
+    margin-top: 15px;
+    margin-left: calc(-5vw + 10px);
+  }
+  .prices {
+    width: 90vw;
+    margin-left: -5vw;
+  }
+  .pricingBox {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .prices,
+  .pricingOverlay {
+    flex-wrap: wrap;
+    font-size: 16px;
+  }
+
+  #prices {
+    margin: 15px 5%;
+  }
+  .prices {
+    width: 100%;
+    margin: 0;
+  }
+
+  .prices span {
+    font-size: 14px;
+  }
+
+  .pricingBox {
+    padding: 20px 5%;
+  }
+
+  .pricingBox:last-child {
+    margin: -45px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .prices {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #prices {
+    margin: 5px 5%;
+  }
+
+  .pricingBox {
+    padding: 20px;
+  }
+
+  .prices h4:first-of-type {
+    padding-top: 0;
+  }
+  .prices h4 {
+    font-size: 14px;
+    padding-top: 20px;
+  }
+
+  #paddingExtra {
+    padding-top: 20px;
+  }
+}
+
+/* VOUCHER
+----------------------------------- */
+
+.voucherBox {
+  width: 100%;
+  display: flex;
+  margin: 50px auto;
+}
+
+.voucherText {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  line-height: 200%;
+  padding: 30px 30px 30px 0;
+}
+
+.voucherText h2 {
+  color: #cdbc84;
+  margin-bottom: 20px;
+}
+
+.voucherText p {
+  padding: 10px 20px 10px 0;
+}
+
+.voucherImage {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voucherImage img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1492px) {
+  .voucherBox {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .voucherBox {
+    width: 100%;
+    margin: 0;
+  }
+
+  .voucherText {
+    padding: 10 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .voucherText {
+    width: 90%;
+    margin: 20px 20px;
+    padding: 0;
+  }
+
+  .voucherBox {
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 5%;
+    padding-top: 6px;
+    margin: 0 auto;
+  }
+
+  .voucherImage {
+    padding-top: 10px;
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .voucherBox {
+    width: 100%;
+    margin: 0;
+  }
+  .voucherText {
+    margin: 30px auto 0;
+  }
+
+  .voucherText p {
+    padding: 0 20px 10px 0;
+  }
+}
+
+/* GALLERY
+----------------------------------- */
+
+#gallery {
+  padding-top: 30px;
+  margin: auto;
+}
+
+.gallery {
+  width: 100%;
+}
+
+.galleryBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0 100px;
+}
+
+.galleryBox h2 {
+  padding-bottom: 20px;
+}
+
+.galleryBox img {
+  width: calc(100% / 4 - 10px);
+  border: 2px solid #cdbc84;
+  border-radius: 20px;
+  margin: 5px 5px;
+}
+
+.galleryBox img:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+.galleryModal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.galleryModal img {
+  height: 70%;
+}
+
+.galleryModal p {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 50px;
+  margin: 3vmin;
+  color: #f1f1f1;
+  font-weight: 100;
+}
+
+.closeBtn:hover {
+  color: #bbb;
+  transition: all ease-in-out 0.25s;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1492px) {
+  .gallery {
+    width: 70%;
+  }
+
+  .galleryBox {
+    width: 100%;
+    margin: 30px 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .gallery {
+    width: 100%;
+  }
+
+  .galleryBox img {
+    width: calc(100% / 4 - 10px);
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gallery {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .galleryBox {
+    margin: 15px 0;
+  }
+  .galleryBox img {
+    width: calc(100% / 3 - 10px);
+    margin: 5px;
+  }
+
+  .galleryBox img:nth-child(7),
+  .galleryBox img:nth-child(8) {
+    display: none;
+  }
+
+  .galleryModal img {
+    height: 70vmin;
+    margin-bottom: 5vmin;
+  }
+
+  .galleryModal p {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .gallery {
+    width: 100%;
+    padding: 0;
+  }
+
+  .gallery h2 {
+    margin-left: 5%;
+    margin-bottom: 25px;
+  }
+
+  .galleryBox {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .galleryBox img {
+    width: calc(100% / 2 - 10px);
+  }
+
+  .galleryBox img:nth-child(7),
+  .galleryBox img:nth-child(8) {
+    display: block;
+  }
+
+  .galleryModal img {
+    height: 80vmin;
+    margin-bottom: 2vmin;
+  }
+
+  .galleryModal p {
+    font-size: 5vw;
+    width: 70%;
+    text-align: center;
+  }
+}
+
+/* CONTACT AND MAP
+----------------------------------- */
+
+.contactMapBox {
+  width: 100%;
+  display: flex;
+}
+
+.contact {
+  width: 40%;
+  padding: 20px 50px;
+  background-color: #cdbc84;
+  color: #000;
+  font-size: 20px;
+}
+
+.contact h3 {
+  color: #000;
+}
+
+.contact ul {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.contact ul li {
+  padding: 10px 0;
+  display: flex;
+}
+
+.contactRight {
+  display: flex;
+  align-items: center;
+}
+
+.contactLeft {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contactLeft img {
+  width: 36px;
+}
+
+.map {
+  width: 60%;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact a:hover {
+  color: #0c2a2a;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px) {
+  .contact {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .contactMapBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* FOOTER
+----------------------------------- */
+
+footer {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c2a2a;
+  color: #cdbc84;
+  text-align: center;
+}
