@@ -38,29 +38,47 @@ h4 {
 }
 
 .blackout {
+  position: fixed;
+  z-index: 6;
+  top: -180px;
+  left: 0;
   height: 200px;
   width: 100vw;
   background-color: #0c2a2a;
-  position: fixed;
-  z-index: 140000;
-  top: -180px;
-  right: 0;
-  left: 0;
 }
 
 /* NAVBAR
 ----------------------------------- */
 nav {
+  display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  top: 0;
   width: 100%;
   background-color: #0c2a2a;
-  position: fixed;
-  display: flex;
-  top: 0;
-  z-index: 150000;
+  z-index: 7;
   font-weight: 400;
   padding: 0 20px;
-  align-items: flex-end;
+}
+nav ul {
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+}
+nav ul li {
+  padding: 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+nav ul li a:hover {
+  color: #cdbc84;
+  transition: color 0.3s ease-in-out;
 }
 
 #logo {
@@ -79,37 +97,15 @@ nav {
   height: 100%;
 }
 
-nav ul {
-  width: 100%;
-  height: calc(100vh - 60px);
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  text-align: center;
-}
-nav ul li {
-  padding: 15px;
-}
-
-a:hover {
-  color: #cdbc84;
-  transition: color 0.3s ease-in-out;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-}
-
 .menuToggle {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
   padding: 10px;
-  cursor: pointer;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 .menuToggle:hover {
   opacity: 1;
@@ -127,9 +123,8 @@ nav ul li a {
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 3000;
+  z-index: 3;
 }
-
 #mainVideo video {
   height: 100%;
   width: 100%;
@@ -140,22 +135,21 @@ nav ul li a {
 #mainVideoOverlay {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
-  z-index: 5000;
+  z-index: 4;
   height: 100%;
   width: 100%;
 }
 
 #mainVideoWhiteLogo {
-  height: 100%;
-  width: 100%;
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 8000;
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
   filter: drop-shadow(5px 4px 9px rgba(0, 0, 0, 0.7));
 }
-
 #mainVideoWhiteLogo img {
   width: 65%;
   max-width: 600px;
@@ -164,40 +158,39 @@ nav ul li a {
 /* ABOUT ME
 ----------------------------------- */
 .aboutMe {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   margin-bottom: 50px;
 }
 
 .aboutMeBackground {
+  position: absolute;
+  z-index: 1;
   height: 100%;
   width: 100%;
-  position: absolute;
   background-color: #0c2a2a;
-  z-index: 1000;
 }
 
 .leavesBackground {
+  position: absolute;
+  z-index: 2;
   height: 100%;
   width: 100%;
-  position: absolute;
   opacity: 0.2;
   background-image: url("../images/leaves.jpg");
   background-size: cover;
   background-position: center;
-  z-index: 2000;
 }
 
 .aboutMeContent {
-  width: 100%;
-  height: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   justify-content: space-between;
-  z-index: 3000;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
 }
 
 .aboutMePicture {
@@ -206,20 +199,19 @@ nav ul li a {
   justify-content: center;
   overflow: hidden;
 }
-
 .aboutMePicture img {
   padding: 20px 0;
   width: 85%;
 }
 
 .aboutMeText {
-  height: 100%;
-  width: 100%;
-  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 20px;
   line-height: 200%;
 }
 
@@ -229,22 +221,21 @@ nav ul li a {
 }
 
 .aboutMeTextSlidesAll {
-  display: flex;
   position: relative;
   left: 0;
+  display: flex;
   transition: all 1s ease-out;
 }
-
 .aboutMeTextSlidesAll p {
   width: 33.3333333333%;
   padding: 0 10px;
 }
 
 .barsAboutMe {
-  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
+  width: 100%;
 }
 
 .bar {
@@ -261,29 +252,27 @@ nav ul li a {
 /* ABOUT COMPANY
 ----------------------------------- */
 .aboutCompany {
-  width: 85%;
-  max-width: 992px;
   display: flex;
   justify-content: space-between;
-  margin: 25px auto 25px;
+  width: 85%;
+  max-width: 992px;
+  margin: 25px auto;
 }
 
 .aboutCompanyText {
   width: 100%;
 }
-
 .aboutCompanyText p {
   margin: 20px 20px 0 0;
   line-height: 200%;
 }
 
 .aboutCompanySketch {
-  width: 30%;
   display: none;
   justify-content: flex-end;
   align-items: center;
+  width: 30%;
 }
-
 .aboutCompanySketch img {
   width: 90%;
 }
@@ -293,17 +282,17 @@ nav ul li a {
 #prices {
   width: 100%;
 }
-
 #prices h2 {
   margin: 25px 0 20px 7.5%;
 }
 
 .prices {
-  width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
+  width: 100%;
+  max-width: 1200px;
   background-image: url("../images/leaves.jpg");
   background-size: cover;
   font-size: 18px;
@@ -311,17 +300,16 @@ nav ul li a {
 }
 
 .pricingOverlay {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .pricingTreatment {
   width: 80%;
 }
-
 .pricingTreatment span {
   font-size: 16px;
   display: block;
@@ -331,15 +319,12 @@ nav ul li a {
   width: 100%;
   padding: 30px;
 }
-
 .pricingBox:last-of-type {
   padding: 0 30px;
 }
-
 .pricingBox ul {
-  margin: 15px 0 30px 0;
+  margin: 15px 0 30px;
 }
-
 .pricingBox ul li {
   display: flex;
   justify-content: space-between;
@@ -350,35 +335,33 @@ nav ul li a {
 /* VOUCHER
 ----------------------------------- */
 .voucherBox {
+  display: flex;
+  flex-direction: column-reverse;
   width: 85%;
   max-width: 992px;
-  display: flex;
   gap: 30px;
-  flex-direction: column-reverse;
-  margin: 25px auto 25px;
+  margin: 25px auto;
 }
 
 .voucherText {
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
   line-height: 200%;
 }
-
 .voucherText h2 {
   color: #cdbc84;
   margin-bottom: 20px;
 }
 
 .voucherImage {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-
 .voucherImage img {
   width: 80%;
 }
@@ -395,47 +378,44 @@ nav ul li a {
 }
 
 .galleryBox {
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
-
 .galleryBox img {
   width: calc(50% - 10px);
   border: 2px solid #cdbc84;
   border-radius: 20px;
   margin: 5px;
 }
-
 .galleryBox img:hover {
   filter: brightness(1.2);
   cursor: pointer;
 }
 
 .galleryModal {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1000000;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.galleryModal img {
-  height: 70%;
-  max-width: 90%;
-}
-
-.galleryModal p {
-  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 8;
+}
+.galleryModal img {
+  max-height: 70%;
+  max-width: 90%;
+}
+.galleryModal p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
   font-size: 18px;
 }
 
@@ -447,7 +427,6 @@ nav ul li a {
   margin: 3vmin;
   color: #f1f1f1;
 }
-
 .closeBtn:hover {
   color: #bbb;
   transition: all ease-in-out 0.25s;
@@ -469,21 +448,26 @@ nav ul li a {
   font-size: 20px;
   padding: 30px 0;
 }
-
 .contact h3 {
   color: #000;
   margin: 0 0 20px 7.5%;
 }
-
 .contact ul {
   list-style-type: none;
   width: 85%;
   margin: 0 auto;
 }
-
 .contact ul li {
   padding: 10px 0;
   display: flex;
+}
+.contact a {
+  text-decoration: none;
+  color: #000;
+}
+.contact a:hover {
+  color: #0c2a2a;
+  text-decoration: underline;
 }
 
 .contactRight {
@@ -492,11 +476,11 @@ nav ul li a {
 }
 
 .contactLeft {
-  margin-right: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-right: 20px;
 }
-
 .contactLeft img {
   width: 36px;
 }
@@ -506,23 +490,13 @@ nav ul li a {
   height: 50vh;
 }
 
-.contact a {
-  text-decoration: none;
-  color: #000;
-}
-
-.contact a:hover {
-  color: #0c2a2a;
-  text-decoration: underline;
-}
-
 /* FOOTER
 ----------------------------------- */
 footer {
-  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 75px;
   background-color: #0c2a2a;
   color: #cdbc84;
   text-align: center;
@@ -531,18 +505,13 @@ footer span {
   display: none;
 }
 
-@media not all and (hover: none) {
-  .bar:hover {
-    background-color: #cdbc84;
-    cursor: pointer;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .d-none {
-    display: none;
-  }
-}
+/* MEDIA QUERIES
+----------------------------------- */
 @media only screen and (min-width: 992px) {
+  body {
+    padding-top: 100px;
+  }
+
   #home,
 #aboutMe,
 #prices,
@@ -551,14 +520,6 @@ footer span {
 #contact {
     margin-top: -100px;
     padding-top: 100px;
-  }
-
-  #logo {
-    display: block;
-  }
-
-  .menuToggle {
-    display: none;
   }
 
   nav {
@@ -571,8 +532,12 @@ footer span {
     height: 100%;
   }
 
-  body {
-    padding-top: 100px;
+  #logo {
+    display: block;
+  }
+
+  .menuToggle {
+    display: none;
   }
 
   .mainVideoBox {
@@ -596,7 +561,7 @@ footer span {
   }
 
   .voucherBox {
-    margin: 30px auto 30px;
+    margin: 30px auto;
   }
 
   .gallery {
@@ -617,19 +582,12 @@ footer span {
     width: 90%;
   }
 
-  .contactMapBox {
+  .pricingOverlay {
     flex-direction: row;
   }
 
-  .contact {
-    width: 40%;
-    margin-top: 25px;
-  }
-
-  .map {
-    margin-top: 25px;
-    height: auto;
-    width: 60%;
+  .pricingBox:last-of-type {
+    padding: 30px;
   }
 
   .voucherBox {
@@ -652,12 +610,19 @@ footer span {
     margin: 3px;
   }
 
-  .pricingOverlay {
+  .contactMapBox {
     flex-direction: row;
   }
 
-  .pricingBox:last-of-type {
-    padding: 30px;
+  .contact {
+    width: 40%;
+    margin-top: 25px;
+  }
+
+  .map {
+    margin-top: 25px;
+    height: auto;
+    width: 60%;
   }
 }
 @media only screen and (min-width: 576px) {
@@ -688,5 +653,16 @@ footer span {
 
   footer span {
     display: inline;
+  }
+}
+@media not all and (hover: none) {
+  .bar:hover {
+    background-color: #cdbc84;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .d-none {
+    display: none;
   }
 }
