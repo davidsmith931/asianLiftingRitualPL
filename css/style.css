@@ -1,8 +1,5 @@
 /* GENERAL
 ----------------------------------- */
-
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -10,8 +7,7 @@
 }
 
 body {
-  position: relative;
-  top: 100px;
+  padding-top: 60px;
   background-color: #000;
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -19,8 +15,18 @@ body {
 }
 
 main {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
+}
+
+#home,
+#aboutMe,
+#prices,
+#voucher,
+#gallery,
+#contact {
+  margin-top: -60px;
+  padding-top: 60px;
 }
 
 h1,
@@ -37,81 +43,57 @@ h4 {
   background-color: #0c2a2a;
   position: fixed;
   z-index: 140000;
-  top: -200px;
+  top: -180px;
   right: 0;
   left: 0;
 }
 
-@media only screen and (min-width: 1492px) {
-  main {
-    width: 90%;
-  }
-}
-@media only screen and (max-width: 992px) {
-  main {
-    width: 80%;
-  }
-  body {
-    top: 80px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  main {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  body {
-    top: 57px;
-  }
-
-  @media only screen and (max-width: 576px) {
-    main {
-      width: 100%;
-    }
-  }
-}
-
 /* NAVBAR
 ----------------------------------- */
-
 nav {
-  height: 100px;
+  flex-direction: column;
   width: 100%;
   background-color: #0c2a2a;
   position: fixed;
   display: flex;
-  justify-content: space-between;
   top: 0;
   z-index: 150000;
   font-weight: 400;
+  padding: 0 20px;
+  align-items: flex-end;
 }
 
 #logo {
-  width: 40vw;
+  display: none;
+  height: 100%;
   padding: 10px 10px;
-  margin: 0 0 0 20px;
 }
-
 #logo img {
   height: 100%;
 }
 
 .navbar {
-  width: 50%;
   display: flex;
   justify-content: center;
+  align-self: center;
+  height: 100%;
 }
+
 nav ul {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  height: calc(100vh - 60px);
+  justify-content: center;
   align-items: center;
   list-style-type: none;
+  text-align: center;
+}
+nav ul li {
+  padding: 15px;
 }
 
 a:hover {
   color: #cdbc84;
+  transition: color 0.3s ease-in-out;
 }
 
 nav ul li a {
@@ -120,78 +102,25 @@ nav ul li a {
 }
 
 .menuToggle {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
 }
-
-@media only screen and (max-width: 1200px) {
-  .navbar {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .navbar {
-    width: 85%;
-    font-size: 14px;
-  }
-
-  nav {
-    height: 80px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  nav {
-    height: fit-content;
-    flex-direction: column-reverse;
-  }
-
-  .navbar {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh - 57px);
-    justify-content: flex-start;
-  }
-  nav ul li {
-    padding: 3vh 0;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-  }
-
-  #logo {
-    display: none;
-  }
-
-  .menuToggle {
-    font-size: 40px;
-    margin: 5px 20px;
-    align-self: flex-end;
-    display: block;
-    cursor: pointer;
-    order: 1;
-  }
-
-  .displayNone {
-    display: none;
-  }
+.menuToggle:hover {
+  opacity: 1;
 }
 
 /* MAIN VIDEO
 ----------------------------------- */
-
 .mainVideoBox {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 60px);
   max-width: 100%;
   position: relative;
-  margin-bottom: 50px;
 }
 
 #mainVideo {
@@ -204,7 +133,8 @@ nav ul li a {
 #mainVideo video {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #mainVideoOverlay {
@@ -227,53 +157,17 @@ nav ul li a {
 }
 
 #mainVideoWhiteLogo img {
-  width: 35%;
-}
-
-@media only screen and (max-width: 992px) {
-  .mainVideoBox {
-    height: calc(100vh - 80px);
-    margin-bottom: 15px;
-  }
-
-  #mainVideoWhiteLogo img {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .mainVideoBox {
-    height: calc(100vh - 57px);
-    margin-bottom: 20px;
-  }
-
-  #mainVideoWhiteLogo img {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .mainVideoBox {
-    margin-bottom: 0;
-  }
-
-  #mainVideoWhiteLogo img {
-    width: 70%;
-  }
+  width: 65%;
+  max-width: 600px;
 }
 
 /* ABOUT ME
 ----------------------------------- */
-
-#aboutMe {
-  padding-top: 30px;
-}
-
 .aboutMe {
-  width: 90%;
-  min-height: 320px;
+  width: 100%;
+  height: 100%;
   position: relative;
-  margin: 0 auto 50px;
+  margin-bottom: 50px;
 }
 
 .aboutMeBackground {
@@ -298,8 +192,10 @@ nav ul li a {
 .aboutMeContent {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   display: flex;
+  flex-direction: column;
+  position: relative;
   justify-content: space-between;
   z-index: 3000;
 }
@@ -312,12 +208,14 @@ nav ul li a {
 }
 
 .aboutMePicture img {
-  height: 120%;
+  padding: 20px 0;
+  width: 85%;
 }
 
 .aboutMeText {
   height: 100%;
-  width: 60%;
+  width: 100%;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -326,7 +224,7 @@ nav ul li a {
 }
 
 .aboutMeTextSlidesVisible {
-  width: 72%;
+  width: 90%;
   overflow: hidden;
 }
 
@@ -338,7 +236,7 @@ nav ul li a {
 }
 
 .aboutMeTextSlidesAll p {
-  width: calc(100% / 3);
+  width: 33.3333333333%;
   padding: 0 10px;
 }
 
@@ -356,90 +254,24 @@ nav ul li a {
   background-color: #c4c4c4;
 }
 
-@media not all and (hover: none) {
-  .bar:hover {
-    background-color: #cdbc84;
-    cursor: pointer;
-  }
-}
-
 .barGold {
   background-color: #cdbc84;
 }
 
-@media only screen and (min-width: 1492px) {
-  .aboutMe {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .aboutMe {
-    width: 90%;
-    margin: 0 auto 25px;
-  }
-
-  .aboutMeTextSlidesVisible {
-    width: 85%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .aboutMe {
-    width: 90%;
-  }
-
-  .aboutMeTextSlidesVisible {
-    width: 85%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .aboutMe {
-    height: 100%;
-    width: 100%;
-    margin: 0 auto 25px;
-  }
-  .aboutMeContent {
-    flex-direction: column;
-    position: relative;
-  }
-
-  .aboutMePicture img {
-    padding: 20px 0;
-    width: 85%;
-  }
-
-  .aboutMeText {
-    width: 100%;
-    padding-bottom: 20px;
-  }
-
-  .aboutMeTextSlidesVisible {
-    padding-bottom: 10px;
-  }
-
-  .bar {
-    width: 16px;
-    height: 8px;
-    margin-bottom: 10px;
-  }
-}
-
 /* ABOUT COMPANY
 ----------------------------------- */
-
 .aboutCompany {
-  width: 100%;
+  width: 85%;
+  max-width: 992px;
   display: flex;
   justify-content: space-between;
-  padding-top: 25px;
-  margin: 0 auto 50px;
+  margin: 25px auto 25px;
 }
 
 .aboutCompanyText {
-  width: 70%;
+  width: 100%;
 }
+
 .aboutCompanyText p {
   margin: 20px 20px 0 0;
   line-height: 200%;
@@ -447,7 +279,7 @@ nav ul li a {
 
 .aboutCompanySketch {
   width: 30%;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   align-items: center;
 }
@@ -456,76 +288,33 @@ nav ul li a {
   width: 90%;
 }
 
-@media only screen and (min-width: 1492px) {
-  .aboutCompany {
-    width: 70%;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .aboutCompany {
-    margin: 0 auto 20px;
-  }
-
-  .aboutCompanyText {
-    width: 80%;
-  }
-
-  .aboutCompanySketch {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .aboutCompany {
-    width: 90%;
-    margin: 0 auto 20px;
-  }
-
-  .aboutCompanyText {
-    width: 90%;
-    margin: auto;
-  }
-
-  .aboutCompanySketch {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 567px) {
-  .aboutCompany {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .aboutCompanyText h2 {
-    font-size: 16px;
-  }
-}
-
 /* PRICING
 ----------------------------------- */
 #prices {
-  padding-top: 30px;
-  width: calc(84vw - 30px);
-  margin-left: calc(-8vw + 30px);
+  width: 100%;
+}
+
+#prices h2 {
+  margin: 25px 0 20px 7.5%;
 }
 
 .prices {
-  width: 84vw;
-  margin: 30px 0 0 -8vw;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   position: relative;
   background-image: url("../images/leaves.jpg");
   background-size: cover;
   font-size: 18px;
+  margin: 0 auto 25px;
 }
 
 .pricingOverlay {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -543,6 +332,10 @@ nav ul li a {
   padding: 30px;
 }
 
+.pricingBox:last-of-type {
+  padding: 0 30px;
+}
+
 .pricingBox ul {
   margin: 15px 0 30px 0;
 }
@@ -554,104 +347,24 @@ nav ul li a {
   margin: 20px 0;
 }
 
-@media only screen and (min-width: 1492px) {
-  #prices {
-    width: 80%;
-    margin-left: calc(10% + 30px);
-  }
-  .prices {
-    width: 80%;
-    margin: 30px 0 0 10%;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  #prices {
-    width: calc(90vw);
-    margin-top: 15px;
-    margin-left: calc(-5vw + 10px);
-  }
-  .prices {
-    width: 90vw;
-    margin-left: -5vw;
-  }
-  .pricingBox {
-    padding: 10px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .prices,
-  .pricingOverlay {
-    flex-wrap: wrap;
-    font-size: 16px;
-  }
-
-  #prices {
-    margin: 15px 5%;
-  }
-  .prices {
-    width: 100%;
-    margin: 0;
-  }
-
-  .prices span {
-    font-size: 14px;
-  }
-
-  .pricingBox {
-    padding: 20px 5%;
-  }
-
-  .pricingBox:last-child {
-    margin: -45px 0 0 0;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .prices {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  #prices {
-    margin: 5px 5%;
-  }
-
-  .pricingBox {
-    padding: 20px;
-  }
-
-  .prices h4:first-of-type {
-    padding-top: 0;
-  }
-  .prices h4 {
-    font-size: 14px;
-    padding-top: 20px;
-  }
-
-  #paddingExtra {
-    padding-top: 20px;
-  }
-}
-
 /* VOUCHER
 ----------------------------------- */
-
 .voucherBox {
-  width: 100%;
+  width: 85%;
+  max-width: 992px;
   display: flex;
-  margin: 50px auto;
+  gap: 30px;
+  flex-direction: column-reverse;
+  margin: 25px auto 25px;
 }
 
 .voucherText {
   height: 100%;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   line-height: 200%;
-  padding: 30px 30px 30px 0;
 }
 
 .voucherText h2 {
@@ -659,85 +372,26 @@ nav ul li a {
   margin-bottom: 20px;
 }
 
-.voucherText p {
-  padding: 10px 20px 10px 0;
-}
-
 .voucherImage {
-  width: 40%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .voucherImage img {
-  width: 100%;
-}
-
-@media only screen and (min-width: 1492px) {
-  .voucherBox {
-    width: 70%;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .voucherBox {
-    width: 100%;
-    margin: 0;
-  }
-
-  .voucherText {
-    padding: 10 0;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .voucherText {
-    width: 90%;
-    margin: 20px 20px;
-    padding: 0;
-  }
-
-  .voucherBox {
-    width: 90%;
-    display: flex;
-    flex-direction: column-reverse;
-    margin-left: 5%;
-    padding-top: 6px;
-    margin: 0 auto;
-  }
-
-  .voucherImage {
-    padding-top: 10px;
-    width: 60%;
-    margin: auto;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .voucherBox {
-    width: 100%;
-    margin: 0;
-  }
-  .voucherText {
-    margin: 30px auto 0;
-  }
-
-  .voucherText p {
-    padding: 0 20px 10px 0;
-  }
+  width: 80%;
 }
 
 /* GALLERY
 ----------------------------------- */
-
-#gallery {
-  padding-top: 30px;
-  margin: auto;
-}
-
 .gallery {
-  width: 100%;
+  width: 85%;
+  max-width: 992px;
+  margin: 25px auto;
+}
+.gallery h2 {
+  margin-bottom: 20px;
 }
 
 .galleryBox {
@@ -745,18 +399,13 @@ nav ul li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 30px 0 100px;
-}
-
-.galleryBox h2 {
-  padding-bottom: 20px;
 }
 
 .galleryBox img {
-  width: calc(100% / 4 - 10px);
+  width: calc(50% - 10px);
   border: 2px solid #cdbc84;
   border-radius: 20px;
-  margin: 5px 5px;
+  margin: 5px;
 }
 
 .galleryBox img:hover {
@@ -765,7 +414,7 @@ nav ul li a {
 }
 
 .galleryModal {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -779,6 +428,7 @@ nav ul li a {
 
 .galleryModal img {
   height: 70%;
+  max-width: 90%;
 }
 
 .galleryModal p {
@@ -796,7 +446,6 @@ nav ul li a {
   font-size: 50px;
   margin: 3vmin;
   color: #f1f1f1;
-  font-weight: 100;
 }
 
 .closeBtn:hover {
@@ -805,117 +454,31 @@ nav ul li a {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 1492px) {
-  .gallery {
-    width: 70%;
-  }
-
-  .galleryBox {
-    width: 100%;
-    margin: 30px 0;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .gallery {
-    width: 100%;
-  }
-
-  .galleryBox img {
-    width: calc(100% / 4 - 10px);
-    margin: 5px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .gallery {
-    width: 90%;
-    padding: 0 20px;
-  }
-
-  .galleryBox {
-    margin: 15px 0;
-  }
-  .galleryBox img {
-    width: calc(100% / 3 - 10px);
-    margin: 5px;
-  }
-
-  .galleryBox img:nth-child(7),
-  .galleryBox img:nth-child(8) {
-    display: none;
-  }
-
-  .galleryModal img {
-    height: 70vmin;
-    margin-bottom: 5vmin;
-  }
-
-  .galleryModal p {
-    font-size: 3vw;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .gallery {
-    width: 100%;
-    padding: 0;
-  }
-
-  .gallery h2 {
-    margin-left: 5%;
-    margin-bottom: 25px;
-  }
-
-  .galleryBox {
-    width: 90%;
-    margin: 15px auto;
-  }
-
-  .galleryBox img {
-    width: calc(100% / 2 - 10px);
-  }
-
-  .galleryBox img:nth-child(7),
-  .galleryBox img:nth-child(8) {
-    display: block;
-  }
-
-  .galleryModal img {
-    height: 80vmin;
-    margin-bottom: 2vmin;
-  }
-
-  .galleryModal p {
-    font-size: 5vw;
-    width: 70%;
-    text-align: center;
-  }
-}
-
 /* CONTACT AND MAP
 ----------------------------------- */
-
 .contactMapBox {
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .contact {
-  width: 40%;
-  padding: 20px 50px;
+  width: 100%;
   background-color: #cdbc84;
   color: #000;
   font-size: 20px;
+  padding: 30px 0;
 }
 
 .contact h3 {
   color: #000;
+  margin: 0 0 20px 7.5%;
 }
 
 .contact ul {
   list-style-type: none;
-  margin: 10px 0;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .contact ul li {
@@ -939,7 +502,8 @@ nav ul li a {
 }
 
 .map {
-  width: 60%;
+  width: 100%;
+  height: 50vh;
 }
 
 .contact a {
@@ -952,32 +516,8 @@ nav ul li a {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 992px) {
-  .contact {
-    padding: 20px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .contact {
-    width: 100%;
-  }
-
-  .map {
-    width: 100%;
-    height: 50vh;
-  }
-
-  .contactMapBox {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 /* FOOTER
 ----------------------------------- */
-
 footer {
   height: 75px;
   display: flex;
@@ -986,4 +526,167 @@ footer {
   background-color: #0c2a2a;
   color: #cdbc84;
   text-align: center;
+}
+footer span {
+  display: none;
+}
+
+@media not all and (hover: none) {
+  .bar:hover {
+    background-color: #cdbc84;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .d-none {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #home,
+#aboutMe,
+#prices,
+#voucher,
+#gallery,
+#contact {
+    margin-top: -100px;
+    padding-top: 100px;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  .menuToggle {
+    display: none;
+  }
+
+  nav {
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav ul {
+    display: flex;
+    height: 100%;
+  }
+
+  body {
+    padding-top: 100px;
+  }
+
+  .mainVideoBox {
+    height: calc(100vh - 100px);
+  }
+
+  .aboutCompanySketch {
+    display: flex;
+  }
+
+  .aboutCompany {
+    margin: 70px auto 40px;
+  }
+
+  .prices {
+    margin: 0 auto 30px;
+  }
+
+  #prices h2 {
+    margin: 30px 0 20px 7.5%;
+  }
+
+  .voucherBox {
+    margin: 30px auto 30px;
+  }
+
+  .gallery {
+    margin: 30px auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .aboutMe {
+    width: 85%;
+    max-width: 750px;
+  }
+
+  .aboutMeTextSlidesVisible {
+    width: 75%;
+  }
+
+  .aboutCompanyText {
+    width: 90%;
+  }
+
+  .contactMapBox {
+    flex-direction: row;
+  }
+
+  .contact {
+    width: 40%;
+    margin-top: 25px;
+  }
+
+  .map {
+    margin-top: 25px;
+    height: auto;
+    width: 60%;
+  }
+
+  .voucherBox {
+    flex-direction: row;
+  }
+
+  .voucherText {
+    width: 55%;
+  }
+
+  .voucherImage {
+    width: 45%;
+  }
+  .voucherImage img {
+    width: 100%;
+  }
+
+  .galleryBox img {
+    width: calc(25% - 6px);
+    margin: 3px;
+  }
+
+  .pricingOverlay {
+    flex-direction: row;
+  }
+
+  .pricingBox:last-of-type {
+    padding: 30px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  main {
+    width: 95%;
+  }
+
+  .aboutMe {
+    position: relative;
+    min-height: 320px;
+    margin: 50px auto;
+  }
+
+  .aboutMeContent {
+    flex-direction: row;
+    position: absolute;
+  }
+
+  .aboutMePicture img {
+    height: 120%;
+    padding: 0;
+    width: auto;
+  }
+
+  .aboutMeText {
+    width: 60%;
+  }
+
+  footer span {
+    display: inline;
+  }
 }

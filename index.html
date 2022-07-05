@@ -22,25 +22,32 @@
 *
 */
 -->
-<link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css" />
     <script
       src="https://kit.fontawesome.com/265c07da63.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav>
         <div id="logo">
           <a href="index.html">
             <img
               src="images/logo.png"
-              alt="Logo firmy AsianLiftingRitual i nazwisko właścicielki - Sylwia Piotrowicz-Jacenko"/> 
+              alt="Logo firmy AsianLiftingRitual i nazwisko właścicielki - Sylwia Piotrowicz-Jacenko"
+            />
           </a>
         </div>
         <div class="menuToggle"><i class="fa-solid fa-bars"></i></div>
         <div class="navbar">
-          <ul class="displayNone">
+          <ul class="d-none">
             <li><a href="#home">STRONA GŁÓWNA</a></li>
             <li><a href="#aboutMe">O MNIE</a></li>
             <li><a href="#prices">CENNIK</a></li>
@@ -59,8 +66,10 @@
             muted
             defaultMuted
             playsinline
-            <source src="videos/mainVideoShort.mp4" type="video/mp4" />
-          </video>
+            <source
+            src="videos/mainVideoShort.mp4"
+            type="video/mp4"
+          />
         </div>
         <div id="mainVideoOverlay"></div>
         <div id="mainVideoWhiteLogo">
@@ -88,17 +97,17 @@
               <div class="aboutMeTextSlidesVisible">
                 <div class="aboutMeTextSlidesAll">
                   <p>
-                    Nazywam się Sylwia Piotrowicz-Jacenko. Jestem
-                    certyfikowanym ekspertem w dziedzinie kosmetyki
-                    profesjonalnej oraz zaawansowanych technik pielęgnacji
-                    twarzy. Jestem założycielką i właścicielką Asian Lifting
-                    Ritual - zrelaksuj się i młodniej.
+                    Nazywam się Sylwia Piotrowicz-Jacenko. Jestem certyfikowanym
+                    ekspertem w dziedzinie kosmetyki profesjonalnej oraz
+                    zaawansowanych technik pielęgnacji twarzy. Jestem
+                    założycielką i właścicielką Asian Lifting Ritual - zrelaksuj
+                    się i młodniej.
                   </p>
                   <p>
                     Jestem pasjonatką holistycznego podejścia do dbania o urodę,
                     dlatego stworzyłam miejsce dla najbardziej wymagających
-                    klientów, pragnących zadbać o swój wygląd, ceniących jakość, profesjonalizm 
-                    oraz indywidualnie dobrane zabiegi.
+                    klientów, pragnących zadbać o swój wygląd, ceniących jakość,
+                    profesjonalizm oraz indywidualnie dobrane zabiegi.
                   </p>
                   <p>
                     Z miłości do piękna oferuję usługi na najwyższym poziomie, a
@@ -148,518 +157,530 @@
         </div>
       </div>
 
-      <h2 id = "prices">CENNIK</h2>
-      <div class="prices">
-        <div class="pricingOverlay">
-          <div class="pricingBox">
-            <h4>ZABIEGI KOSMETYCZNE NA TWARZ</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">
-                  mikrodermabrazja diamentowa z pielęgnacją
-                </div>
-                170 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  oczyszczanie wodorowe <span>(pakiet podstawowy)</span>
-                </div>
-                160 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  oczyszczanie wodorowe/zabieg bankietowy
-                </div>
-                300 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  oczyszczanie wodorowe z regeneracją
-                </div>
-                200 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  oczyszczanie manualne + d'arsonvalizacja
-                </div>
-                160 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">peeling kawitacyjny + maska</div>
-                90 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  peeling kawitacyjny + sonofereza
-                </div>
-                100 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg dotleniający z aktywnym tlenem
-                </div>
-                180 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">zabieg na przebarwienia</div>
-                180 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">zabieg nawilżający</div>
-                180 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">zabieg odmładzający</div>
-                180 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">zabieg silnie ujędrniający</div>
-                180 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">zabieg do cery wrażliwej</div>
-                180 zł
-              </li>
-            </ul>
+      <section id="prices">
+        <h2>CENNIK</h2>
+        <div class="prices">
+          <div class="pricingOverlay">
+            <div class="pricingBox">
+              <h4>ZABIEGI KOSMETYCZNE NA TWARZ</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">
+                    mikrodermabrazja diamentowa z pielęgnacją
+                  </div>
+                  170 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    oczyszczanie wodorowe <span>(pakiet podstawowy)</span>
+                  </div>
+                  160 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    oczyszczanie wodorowe/zabieg bankietowy
+                  </div>
+                  300 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    oczyszczanie wodorowe z regeneracją
+                  </div>
+                  200 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    oczyszczanie manualne + d'arsonvalizacja
+                  </div>
+                  160 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    peeling kawitacyjny + maska
+                  </div>
+                  90 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    peeling kawitacyjny + sonofereza
+                  </div>
+                  100 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg dotleniający z aktywnym tlenem
+                  </div>
+                  180 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">zabieg na przebarwienia</div>
+                  180 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">zabieg nawilżający</div>
+                  180 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">zabieg odmładzający</div>
+                  180 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">zabieg silnie ujędrniający</div>
+                  180 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">zabieg do cery wrażliwej</div>
+                  180 zł
+                </li>
+              </ul>
 
-            <h4>ZABIEGI KOSMETYCZNE NA TWARZ LARENS PROFESSIONAL</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg Sekret Wiecznej Młodości
-                </div>
-                230 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg liftingujący z masażem bańką chińską
-                </div>
-                220 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">zabieg Lipocoll</div>
-                200 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg Lipocoll + peeling kawitacyjny/mikrodermabrazja +
-                  infuzja tlenowa
-                </div>
-                250 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg Anti Acne
-                  <span>(skóra wrażliwa, naczyniowa, z trądzikiem)</span>
-                </div>
-                200 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg Anti Acne + peeling kawitacyjny/mikrodermabrazja +
-                  infuzja tlenowa
-                  <span>(skóra wrażliwa, naczyniowa, z trądzikiem</span>
-                </div>
-                280 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg Anti Aging
-                  <span>(skóra dojrzała, oznaki starzenia, zmarszczki)</span>
-                </div>
-                200 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg Anti Aging + peeling kawitacyjny/mikrodermabrazja +
-                  infuzja tlenowa
-                  <span>(skóra dojrzała, oznaki starzenia, zmarszczki)</span>
-                </div>
-                260 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">zabieg Bio Renew</div>
-                240 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg Hydrating Face<span>(nawilżający twarz)</span>
-                </div>
-                180 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg Hydrating Hand <span>(nawilżający dłonie)</span>
-                </div>
-                120 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg z kwasami AHA face peeling
-                  <span
-                    >(kwasy 2% mlekowy, glikolowy, salicylowy, 1% jabłkowy /
-                    skóra trądzikowa, ze stanami zapalnymi, przebarwienia)</span
-                  >
-                </div>
-                200 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  zabieg z kwadami Deep face peeling
-                  <span
-                    >(kwas migdałowy, pirogronowy 5% / skóra trądzikowa, ze
-                    stanami zapalnymi, przebarwienia)</span
-                  >
-                </div>
-                200 zł
-              </li>
-            </ul>
+              <h4>ZABIEGI KOSMETYCZNE NA TWARZ LARENS PROFESSIONAL</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg Sekret Wiecznej Młodości
+                  </div>
+                  230 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg liftingujący z masażem bańką chińską
+                  </div>
+                  220 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">zabieg Lipocoll</div>
+                  200 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg Lipocoll + peeling kawitacyjny/mikrodermabrazja +
+                    infuzja tlenowa
+                  </div>
+                  250 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg Anti Acne
+                    <span>(skóra wrażliwa, naczyniowa, z trądzikiem)</span>
+                  </div>
+                  200 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg Anti Acne + peeling kawitacyjny/mikrodermabrazja +
+                    infuzja tlenowa
+                    <span>(skóra wrażliwa, naczyniowa, z trądzikiem</span>
+                  </div>
+                  280 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg Anti Aging
+                    <span>(skóra dojrzała, oznaki starzenia, zmarszczki)</span>
+                  </div>
+                  200 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg Anti Aging + peeling kawitacyjny/mikrodermabrazja +
+                    infuzja tlenowa
+                    <span>(skóra dojrzała, oznaki starzenia, zmarszczki)</span>
+                  </div>
+                  260 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">zabieg Bio Renew</div>
+                  240 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg Hydrating Face<span>(nawilżający twarz)</span>
+                  </div>
+                  180 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg Hydrating Hand <span>(nawilżający dłonie)</span>
+                  </div>
+                  120 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg z kwasami AHA face peeling
+                    <span
+                      >(kwasy 2% mlekowy, glikolowy, salicylowy, 1% jabłkowy /
+                      skóra trądzikowa, ze stanami zapalnymi,
+                      przebarwienia)</span
+                    >
+                  </div>
+                  200 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    zabieg z kwadami Deep face peeling
+                    <span
+                      >(kwas migdałowy, pirogronowy 5% / skóra trądzikowa, ze
+                      stanami zapalnymi, przebarwienia)</span
+                    >
+                  </div>
+                  200 zł
+                </li>
+              </ul>
 
-            <h4>ZABIEGI KOSMETYCZNE NA TWARZ FALE RADIOWE BIPOLARNE</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">
-                  oczy + czoło, 25 min.
-                  <span>(worki pod oczami, opadające powieki)</span>
-                </div>
-                99 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  twarz/szyja/dekolt/podbródek, 1 partia, 20 min.
-                  <span>(owal twarzy)</span>
-                </div>
-                99 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">szyja, 30 min.</div>
-                129 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">dekolt, 30 min.</div>
-                139 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  twarz + szyja + dekolt, 30 min.
-                </div>
-                159 zł
-              </li>
-            </ul>
+              <h4>ZABIEGI KOSMETYCZNE NA TWARZ FALE RADIOWE BIPOLARNE</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">
+                    oczy + czoło, 25 min.
+                    <span>(worki pod oczami, opadające powieki)</span>
+                  </div>
+                  99 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    twarz/szyja/dekolt/podbródek, 1 partia, 20 min.
+                    <span>(owal twarzy)</span>
+                  </div>
+                  99 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">szyja, 30 min.</div>
+                  129 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">dekolt, 30 min.</div>
+                  139 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    twarz + szyja + dekolt, 30 min.
+                  </div>
+                  159 zł
+                </li>
+              </ul>
 
-            <h4>ZABIEGI KOSMETYCZNE DODATKOWE</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">świecowanie uszu</div>
-                60 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  świecowanie uszu (pakiet 3 zabiegów)
-                </div>
-                120 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  fototerapia LED/naświetlanie, 20 min.
-                </div>
-                50 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  fototerapia LED/naświetlanie, 30 min.
-                </div>
-                70 zł
-              </li>
-            </ul>
+              <h4>ZABIEGI KOSMETYCZNE DODATKOWE</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">świecowanie uszu</div>
+                  60 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    świecowanie uszu (pakiet 3 zabiegów)
+                  </div>
+                  120 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    fototerapia LED/naświetlanie, 20 min.
+                  </div>
+                  50 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    fototerapia LED/naświetlanie, 30 min.
+                  </div>
+                  70 zł
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricingBox">
+              <h4 id="paddingExtra">MASAŻ - TERAPIA MANUALNA TWARZY</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">
+                    masaż Kobido z rytuałem japońskim
+                    <span>czas trwania: 1 godz. 45 min.</span>
+                  </div>
+                  200 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    masaż Kobido Anti Aging
+                    <span>czas trwania: 1 godz. 15 min.</span>
+                  </div>
+                  180 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    masaż Kobido relaks
+                    <span>czas trwania: 1 godz. 15 min.</span>
+                  </div>
+                  180 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    masaż Gua Sha + drenaż limfatyczny
+                    <span>czas trwania: 45 min. </span>
+                  </div>
+                  120 zł
+                </li>
+
+                <li>
+                  <div class="pricingTreatment">
+                    masaż japoński Kassaji liftingująco-drenujący
+                    <span>czas trwania: 1 godz. </span>
+                  </div>
+                  180 zł
+                </li>
+
+                <li>
+                  <div class="pricingTreatment">
+                    masaż Bańkami Chińskimi lifting + drenaż limfatyczny
+                    <span>czas trwania: 45 min. </span>
+                  </div>
+                  120 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    japoński rytuał pielęgnacyjny
+                    <span>czas trwania: 1 godz. </span>
+                  </div>
+                  160 zł
+                </li>
+
+                <li>
+                  <div class="pricingTreatment">
+                    masaż rąk i dłoni z pielęgnacją
+                    <span>czas trwania: 45 min. </span>
+                  </div>
+                  120 zł
+                </li>
+              </ul>
+
+              <h4>OPRAWA OKA</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">regulacja brwi</div>
+                  20 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">henna brwi</div>
+                  20 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">henna brwi z regulacją</div>
+                  35 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    regulacja brwi z henną brwi i rzęs
+                  </div>
+                  50 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    henna marokańska z geometrią
+                  </div>
+                  80 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    lifting, laminacja, koloryzacja, botox rzęs
+                  </div>
+                  110 zł
+                </li>
+              </ul>
+
+              <h4>LIPOSUKCJA ULTRADŹWIĘKOWA I INFRARED</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">
+                    wewnętrzna/zewnętrzna strona ud, 30 min.
+                  </div>
+                  70 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">przód/tył ud, 40 min.</div>
+                  110 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">pośladki, 30 min.</div>
+                  90 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">brzuch, 20 min.</div>
+                  80 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    okolice talii/biodra, 30 min.
+                  </div>
+                  80 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">okolice ramion, 30 min.</div>
+                  60 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">łydki, 30 min.</div>
+                  70 zł
+                </li>
+              </ul>
+
+              <h4>DERMOMASAŻ</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">do innego zabiegu</div>
+                  40 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    jedna partia ciała (brzuch, boczki, łydki, uda, pośladki,
+                    ramiona)
+                  </div>
+                  120 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    trzy partie ciała (np. brzuch, boczki, pośladki)
+                  </div>
+                  250 zł
+                </li>
+              </ul>
+
+              <h4>FALE RADIOWE BIPOLARNE</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">
+                    pośladki/uda/brzuch - 1 partia, 30 min.
+                  </div>
+                  149 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    pośladki/uda/brzuch - 1 partia, 45-60 min.
+                  </div>
+                  199 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">
+                    dłonie/stopy - 1 partia, 25 min.
+                  </div>
+                  99 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">ramiona, 45 min.</div>
+                  149 zł
+                </li>
+              </ul>
+
+              <h4>DEPILACJA WOSKIEM</h4>
+              <ul>
+                <li>
+                  <div class="pricingTreatment">wąsik</div>
+                  15 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">broda</div>
+                  25 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">twarz (boczki, policzki)</div>
+                  60 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">pachy</div>
+                  35 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">ręce całe</div>
+                  55 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">przedramiona</div>
+                  50 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">ramiona</div>
+                  25 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">całe nogi</div>
+                  100 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">łydki</div>
+                  50 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">uda</div>
+                  50 zł
+                </li>
+                <li>
+                  <div class="pricingTreatment">bikini</div>
+                  50 zł
+                </li>
+              </ul>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div class="pricingBox">
-            <h4 id = "paddingExtra">MASAŻ - TERAPIA MANUALNA TWARZY</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">
-                  masaż Kobido z rytuałem japońskim
-                  <span>czas trwania: 1 godz. 45 min.</span>
-                </div>
-                200 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  masaż Kobido Anti Aging
-                  <span>czas trwania: 1 godz. 15 min.</span>
-                </div>
-                180 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  masaż Kobido relaks
-                  <span>czas trwania: 1 godz. 15 min.</span>
-                </div>
-                180 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  masaż Gua Sha + drenaż limfatyczny
-                  <span>czas trwania: 45 min. </span>
-                </div>
-                120 zł
-              </li>
-
-              <li>
-                <div class="pricingTreatment">
-                  masaż japoński Kassaji liftingująco-drenujący
-                  <span>czas trwania: 1 godz. </span>
-                </div>
-                180 zł
-              </li>
-
-              <li>
-                <div class="pricingTreatment">
-                  masaż Bańkami Chińskimi lifting + drenaż limfatyczny
-                  <span>czas trwania: 45 min. </span>
-                </div>
-                120 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  japoński rytuał pielęgnacyjny
-                  <span>czas trwania: 1 godz. </span>
-                </div>
-                160 zł
-              </li>
-
-              <li>
-                <div class="pricingTreatment">
-                  masaż rąk i dłoni z pielęgnacją
-                  <span>czas trwania: 45 min. </span>
-                </div>
-                120 zł
-              </li>
-            </ul>
-
-            <h4>OPRAWA OKA</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">regulacja brwi</div>
-                20 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">henna brwi</div>
-                20 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">henna brwi z regulacją</div>
-                35 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  regulacja brwi z henną brwi i rzęs
-                </div>
-                50 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">henna marokańska z geometrią</div>
-                80 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  lifting, laminacja, koloryzacja, botox rzęs
-                </div>
-                110 zł
-              </li>
-            </ul>
-
-            <h4>LIPOSUKCJA ULTRADŹWIĘKOWA I INFRARED</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">
-                  wewnętrzna/zewnętrzna strona ud, 30 min.
-                </div>
-                70 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">przód/tył ud, 40 min.</div>
-                110 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">pośladki, 30 min.</div>
-                90 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">brzuch, 20 min.</div>
-                80 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  okolice talii/biodra, 30 min.
-                </div>
-                80 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">okolice ramion, 30 min.</div>
-                60 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">łydki, 30 min.</div>
-                70 zł
-              </li>
-            </ul>
-
-            <h4>DERMOMASAŻ</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">do innego zabiegu</div>
-                40 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  jedna partia ciała (brzuch, boczki, łydki, uda, pośladki,
-                  ramiona)
-                </div>
-                120 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  trzy partie ciała (np. brzuch, boczki, pośladki)
-                </div>
-                250 zł
-              </li>
-            </ul>
-
-            <h4>FALE RADIOWE BIPOLARNE</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">
-                  pośladki/uda/brzuch - 1 partia, 30 min.
-                </div>
-                149 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  pośladki/uda/brzuch - 1 partia, 45-60 min.
-                </div>
-                199 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">
-                  dłonie/stopy - 1 partia, 25 min.
-                </div>
-                99 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">ramiona, 45 min.</div>
-                149 zł
-              </li>
-            </ul>
-
-            <h4>DEPILACJA WOSKIEM</h4>
-            <ul>
-              <li>
-                <div class="pricingTreatment">wąsik</div>
-                15 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">broda</div>
-                25 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">twarz (boczki, policzki)</div>
-                60 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">pachy</div>
-                35 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">ręce całe</div>
-                55 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">przedramiona</div>
-                50 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">ramiona</div>
-                25 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">całe nogi</div>
-                100 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">łydki</div>
-                50 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">uda</div>
-                50 zł
-              </li>
-              <li>
-                <div class="pricingTreatment">bikini</div>
-                50 zł
-              </li>
-            </ul>
+      <section id="voucher">
+        <div class="voucherBox">
+          <div class="voucherText">
+            <h2>KARTA PODARUNKOWA</h2>
+            <p>
+              Zastanawiasz się nad prezentem dla bliskiej Ci osoby i nic nie
+              przychodzi Ci do głowy? Zapraszam po Voucher na dowolny zabieg
+              kosmetyczny, który dobiorę indywidualnie dla Ciebie lub
+              relaksująco- liftingujący masaż Kobido z rytuałem japońskim.
+            </p>
+            <p>
+              Bon podarunkowy, jaki mogę Ci zaproponować, to wyjątkowy i
+              luksusowy prezent. Aby spełnianie marzeń uczynić jeszcze
+              prostszym!
+            </p>
+          </div>
+          <div class="voucherImage">
+            <img
+              src="images/voucher.png"
+              alt="Obrazek przedstawia voucher (kartę podarunkową) na wybrany zabieg lub kwotę, który można kupić w gabinecie"
+            />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="voucher" class="voucherBox">
-        <div class="voucherText">
-          <h2>KARTA PODARUNKOWA</h2>
-          <p>
-            Zastanawiasz się nad prezentem dla bliskiej Ci osoby i nic nie
-            przychodzi Ci do głowy? Zapraszam po Voucher na dowolny zabieg
-            kosmetyczny, który dobiorę indywidualnie dla Ciebie lub relaksująco-
-            liftingujący masaż Kobido z rytuałem japońskim.
-          </p>
-          <p>
-            Bon podarunkowy, jaki mogę Ci zaproponować, to wyjątkowy i luksusowy
-            prezent. Aby spełnianie marzeń uczynić jeszcze prostszym!
-          </p>
+      <section id="gallery">
+        <div class="gallery">
+          <h2>GALERIA</h2>
+          <div class="galleryBox">
+            <img
+              src="images/gallery/1.jpg"
+              alt="Lifting, laminacja, koloryzacja, botoks rzęs - przed i po zabiegu"
+            />
+            <img
+              src="images/gallery/2.jpg"
+              alt="Masaż Kobido, po 1 zabiegu, uniesienie owalu"
+            />
+            <img
+              src="images/gallery/3.jpg"
+              alt="Lifting, laminacja, koloryzacja, botoks rzęs"
+            />
+            <img src="images/gallery/4.jpg" alt="Masaż Kobido, po 1 zabiegu" />
+            <img
+              src="images/gallery/5.jpg"
+              alt="Henna marokańska brwi z geometrią - przed i po zabiegu"
+            />
+            <img
+              src="images/gallery/6.jpg"
+              alt="Oczyszczanie wodorowe - przed i po zabiegu"
+            />
+            <img
+              src="images/gallery/7.jpg"
+              alt="Masaż Kobido, po 1 zabiegu, uniesienie owalu"
+            />
+            <img
+              src="images/gallery/8.jpg"
+              alt="Henna marokańska brwi z geometrią - przed i po zabiegu"
+            />
+          </div>
         </div>
-        <div class="voucherImage">
-          <img
-            src="images/voucher.png"
-            alt="Obrazek przedstawia voucher (kartę podarunkową) na wybrany zabieg lub kwotę, który można kupić w gabinecie"
-          />
-        </div>
-      </div>
-
-      <div id="gallery" class="gallery">
-        <h2>GALERIA</h2>
-        <div class="galleryBox">
-          <img
-            src="images/gallery/1.jpg"
-            alt="Lifting, laminacja, koloryzacja, botoks rzęs - przed i po zabiegu"
-          />
-          <img
-            src="images/gallery/2.jpg"
-            alt="Masaż Kobido, po 1 zabiegu, uniesienie owalu"
-          />
-          <img
-            src="images/gallery/3.jpg"
-            alt="Lifting, laminacja, koloryzacja, botoks rzęs"
-          />
-          <img src="images/gallery/4.jpg" alt="Masaż Kobido, po 1 zabiegu" />
-          <img
-            src="images/gallery/5.jpg"
-            alt="Henna marokańska brwi z geometrią - przed i po zabiegu"
-          />
-          <img
-            src="images/gallery/6.jpg"
-            alt="Oczyszczanie wodorowe - przed i po zabiegu"
-          />
-          <img
-            src="images/gallery/7.jpg"
-            alt="Masaż Kobido, po 1 zabiegu, uniesienie owalu"
-          />
-          <img
-            src="images/gallery/8.jpg"
-            alt="Henna marokańska brwi z geometrią - przed i po zabiegu"
-          />
-        </div>
-      </div>
+      </section>
 
       <div class="galleryModal" style="display: none"></div>
     </main>
@@ -678,7 +699,10 @@
           </li>
           <li>
             <div class="contactLeft">
-              <img src="images/iconsContact/envelope.svg" alt="Ikona - koperta" />
+              <img
+                src="images/iconsContact/envelope.svg"
+                alt="Ikona - koperta"
+              />
             </div>
             <div class="contactRight">
               <a href="mailto:sylwia.piotrowicz@tlen.pl"
@@ -688,7 +712,10 @@
           </li>
           <li>
             <div class="contactLeft">
-              <img src="images/iconsContact/facebook.svg" alt="Ikona - logo Facebooka" />
+              <img
+                src="images/iconsContact/facebook.svg"
+                alt="Ikona - logo Facebooka"
+              />
             </div>
             <div class="contactRight">
               <a
@@ -699,7 +726,10 @@
           </li>
           <li>
             <div class="contactLeft">
-              <img src="images/iconsContact/building.svg" alt="Ikona - budynek" />
+              <img
+                src="images/iconsContact/building.svg"
+                alt="Ikona - budynek"
+              />
             </div>
             <div class="contactRight">
               Budziszyńska 20/U1 <br />
@@ -709,11 +739,21 @@
         </ul>
       </div>
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.7390392886145!2d14.523854317443845!3d53.40160789999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa08c26dce022b%3A0x45242d9df59f333c!2sBudziszy%C5%84ska%2020%2Fu1%2C%2070-023%20Szczecin!5e0!3m2!1spl!2spl!4v1647616156938!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.7390392886145!2d14.523854317443845!3d53.40160789999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa08c26dce022b%3A0x45242d9df59f333c!2sBudziszy%C5%84ska%2020%2Fu1%2C%2070-023%20Szczecin!5e0!3m2!1spl!2spl!4v1647616156938!5m2!1spl!2spl"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen="true"
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
-    <footer>AsianLiftingRitual.PL - wszystkie prawa zastrzeżone © 2022</footer>
-    <div class="blackout" id="home"></div>
+    <footer>
+      AsianLiftingRitual.PL -
+      <span>&nbsp;wszystkie prawa zastrzeżone &nbsp;</span> © 2022
+    </footer>
+    <div class="blackout"></div>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/menu.js"></script>
