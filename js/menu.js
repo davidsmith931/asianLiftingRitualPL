@@ -8,15 +8,7 @@ const blackout = document.querySelector(".blackout");
 // SHOWING AND HIDING NAVBAR LINKS BY CLICKING BUTTON
 // -----------------------------
 const openAndClose = function () {
-  navbar.classList.toggle("d-none");
-  blackout.classList.toggle("d-none");
-  // if (navbar.classList.contains("d-none")) {
-  //   navbar.classList.remove("d-none");
-  //   blackout.classList.remove("d-none");
-  // } else {
-  //   navbar.classList.add("d-none");
-  //   blackout.classList.add("d-none");
-  // }
+  [navbar, blackout].forEach((el) => el.classList.toggle("d-none"));
 };
 
 menuButton.addEventListener("click", openAndClose);
@@ -24,8 +16,7 @@ menuButton.addEventListener("click", openAndClose);
 // HIDING NAVBAR LINKS AFTER CLICKING A LINK
 // -----------------------------
 const closeAfterClick = function () {
-  navbar.classList.add("d-none");
-  blackout.classList.add("d-none");
+  [navbar, blackout].forEach((el) => el.classList.add("d-none"));
 };
 
 for (i = 0; i < navbarLinks.length; i++) {

@@ -31,7 +31,8 @@ for (let i = 0; i < allGalleryImages.length; i++) {
     const closeBtn = document.querySelector(".galleryModal i");
     closeBtn.classList.add("fa-solid", "fa-xmark", "closeBtn");
 
-    // CLOSING MODAL ON CLICK (EXCEPT CLICKING ON IMAGE AND TEXT)
+    // CLOSING MODAL ON CLICK (EXCEPT CLICKING
+    // ON IMAGE AND TEXT) AND AFTER PRESSING ESCAPE
     // -----------------------------
     galleryModal.addEventListener("click", function (e) {
       if (
