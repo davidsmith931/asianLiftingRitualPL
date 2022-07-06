@@ -12,6 +12,12 @@ $barColor: #c4c4c4;
 $closeButton: #f1f1f1;
 $closeButtonHover: #bbb;
 
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -118,9 +124,7 @@ nav {
 }
 
 .menuToggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
   font-size: 40px;
   padding: 10px;
   opacity: 0.8;
@@ -163,9 +167,7 @@ nav {
 }
 
 #mainVideoWhiteLogo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
   position: absolute;
   z-index: 5;
   height: 100%;
@@ -319,9 +321,7 @@ nav {
 }
 
 .prices {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
   position: relative;
   width: 100%;
   max-width: 1200px;
@@ -397,9 +397,7 @@ nav {
 }
 
 .voucherImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
   width: 100%;
 
   img {
@@ -440,9 +438,7 @@ nav {
 }
 
 .galleryModal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -458,9 +454,7 @@ nav {
   }
 
   p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox();
     height: 10%;
     font-size: 18px;
   }
@@ -530,9 +524,7 @@ nav {
 }
 
 .contactLeft {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexbox();
   margin-right: 20px;
 
   img {
@@ -549,9 +541,7 @@ nav {
 ----------------------------------- */
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
   height: 75px;
   background-color: $mainColor;
   color: $hColor;

@@ -477,8 +477,8 @@ nav ul li a:hover {
 
 .contactLeft {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-right: 20px;
 }
 .contactLeft img {
